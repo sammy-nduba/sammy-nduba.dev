@@ -11,12 +11,13 @@ class SiteLogo extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      child: const Text("sam", style: TextStyle(
+      child: const Text("Nduba", style: TextStyle(
           fontSize: 22, fontWeight: FontWeight.bold,
           decoration: TextDecoration.underline,
           color: CustomColor.yellowSecondary
       ),
       ),
+
     );
   }
 }

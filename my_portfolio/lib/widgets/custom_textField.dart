@@ -8,7 +8,7 @@ class CustomTextField extends StatelessWidget{
   const CustomTextField({super.key,
     this.controller,
     this.maxLines = 1,
-    this.hintText});
+    this.hintText, required String? Function(dynamic value) validator});
 
   final TextEditingController? controller;
   final int maxLines;

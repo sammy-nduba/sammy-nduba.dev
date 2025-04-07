@@ -64,7 +64,7 @@ class ProjectSection extends StatelessWidget{
               children: [
                 for(int i=0; i<hobbyProjectUtils.length; i++)
                   ProjectCardWidget(
-                      project: workProjectUtils[i]
+                      project: hobbyProjectUtils[i]
                   ),
               ],
             ),

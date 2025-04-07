@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/widgets/contact_section.dart';
 
 import '../constants/colors.dart';
 
@@ -26,8 +27,10 @@ class Desktop extends StatelessWidget {
             children: [
               //  into message
               const Text(
-                "Hello. \n I am Nduba Samuel"
-                    "\nAndroid, IOS, and\n Flutter Developer",
+                "Hello. "
+                    "\n I am Nduba Samuel"
+                    "\nAndroid, IOS, and"
+                    "\n Flutter Developer",
                 style: TextStyle(
                   fontSize: 30.0,
                   height: 1.5,
@@ -39,7 +42,12 @@ class Desktop extends StatelessWidget {
               SizedBox(
                 width: 250.0,
                 child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                            builder: (context) => const ContactSection())
+                      );
+                    },
                     child:
                     const Text("Get in touch")),
               ),

@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/widgets/contact_section.dart';
 import '../constants/colors.dart';
 
 class Mobile extends StatelessWidget{
@@ -84,7 +85,14 @@ class Mobile extends StatelessWidget{
                 SizedBox(
                   width: 190.0,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (
+                        context
+                        ) => const ContactSection()
+                        )
+                      );
+                    },
                     child: const Text("Get in touch"),
                   ),
                 ),
