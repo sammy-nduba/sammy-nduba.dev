@@ -45,7 +45,7 @@ class _ContactSectionState extends State<ContactSection> {
     setState(() => _isSending = true);
 
     try {
-      await FirebaseFirestore.instance.collection('messages').add({
+      await FirebaseFirestore.instance.collection('message').add({
         'name': _nameController.text.trim(),
         'email': _emailController.text.trim(),
         'message': _messageController.text.trim(),
@@ -186,8 +186,14 @@ class _ContactSectionState extends State<ContactSection> {
           child: CustomTextField(
             controller: _emailController,
             hintText: "Your Email",
-            validator: (value) =>
-            value!.isEmpty ? "Please enter your email" : null,
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return "Please enter your email";
+              } else if (!RegExp(r'^[^@]+@[^@]+\.[^@]+').hasMatch(value)) {
+                return "Please enter a valid email";
+              }
+              return null;
+            },
           ),
         ),
       ],
