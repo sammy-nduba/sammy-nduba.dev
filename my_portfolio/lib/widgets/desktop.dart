@@ -42,12 +42,7 @@ class Desktop extends StatelessWidget {
               SizedBox(
                 width: 250.0,
                 child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                            builder: (context) => const ContactSection())
-                      );
-                    },
+                    onPressed: () {},
                     child:
                     const Text("Get in touch")),
               ),

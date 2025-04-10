@@ -31,8 +31,31 @@
 
   <title>my_portfolio</title>
   <link rel="manifest" href="manifest.json">
+
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js"></script>
+  <script>
+    const firebaseConfig = {
+      WEB_API_KEY=AIzaSyA5Oyd8ymhY-nWdLi23R_9wsABcucXhNG8
+      WEB_APP_ID=1:527276965751:web:906ad5ab172913f545eb72
+      WEB_MESSAGING_SENDER_ID=527276965751
+      WEB_PROJECT_ID=portfolio-1f48f
+      WEB_AUTH_DOMAIN=portfolio-1f48f.firebaseapp.com
+      WEB_STORAGE_BUCKET=portfolio-1f48f.firebasestorage.app
+      WEB_MEASUREMENT_ID=G-LE0Q2SKH51
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+
+
 </head>
 <body>
   <script src="flutter_bootstrap.js" async></script>
+
+  <script src="main.dart.js" type="application/javascript"></script>
+
 </body>
 </html>
